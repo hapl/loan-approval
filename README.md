@@ -19,7 +19,7 @@ These could be tested using the means and comparing the datasets.
 
 I compared them using graphs and tables.
 
-![Categorical_approval](/images/Approval_categorical.png)
+![Categorical_approval](images/Approval_categorical.png)
 
 ## **Process**
 
@@ -27,9 +27,9 @@ I compared them using graphs and tables.
 
 - I found null values that were fixed using mean, median and logic according to data values.
 - The values for the income and loan amount were skewed. I used the log to get a more normal distribution.
-![Log_Loan_amount](/images/Loan_amount.png)
-![Income_before](/images/Income_skewed.png)
-![Income_after_log](/images/combined_income_log.png)
+![Log_Loan_amount](images/Loan_amount.png)
+![Income_before](images/Income_skewed.png)
+![Income_after_log](images/combined_income_log.png)
 
 - For more details, go to section 2 of this [notebook](/notebooks/instructions.ipynb).
 
@@ -44,30 +44,30 @@ I compared them using graphs and tables.
     - Loan Amount Term I used the mean according to its data distribution.
     - I used the median for Loan Amount because the data was skewed (right-tailed).
 
-- For more details, go to section 3 of this [notebook](/notebooks/instructions.ipynb).   
+- For more details, go to section 3 of this [notebook](notebooks/instructions.ipynb).   
 
 ### **3. Feature Engineering**
+
 - Transformation of variables Loan Amount and Combined Income (combination of Applicant and Co-applicant Income) into log values to handle a better distribution.
 - Transform categorical variables into dummies for better handling on the ML model.
-- For more information, go to section 3 of this [notebook](/notebooks/instructions.ipynb). 
+- For more information, go to section 3 of this [notebook](notebooks/instructions.ipynb). 
 
-- I also implemented pipelines to handle all the transformation in the second part of the project. For more information, go to section 5 of this [notebook](/notebooks/instructions.ipynb). 
+- I also implemented pipelines to handle all the transformation in the second part of the project. For more information, go to section 5 of this [notebook](notebooks/instructions.ipynb). 
 
 ### **4. Modelling**
 
 - Used Random Forest Classifier as the algorithm for my implementation. 
 - The result without running hyperparameter tuning was:
 >Accuracy: 72.36%
+
+- I reimplemented all the processes with pipelines
+![pipelines](images/GridSearchCV.png)
+
 - After running GridSearchCV, I saw these results:
-> Best hyperparameters:  {'max_depth': None, 'min_samples_leaf': 2, 'min_samples_split': 10, 'n_estimators': 50}
+> Best hyperparameters: {'model__criterion': 'log_loss', 'model__max_depth': None, 'model__min_samples_leaf': 3, 'model__min_samples_split': 3, 'model__n_estimators': 10}
 
-> Best accuracy score: 75.96%
+> Best accuracy score: 79.67%
 
-- I reimplemented all the processes with pipelines and used PCA, and select Kbest
-![pipelines](/images/Pipelines.png)
-
-- I got better accuracy after rerunning the model with pipelines and optimizations.
-> Accuracy: 80.49%
 
 ### **5. Deployment**
 
@@ -81,11 +81,11 @@ I compared them using graphs and tables.
 
 - The implementation of AWS
 
-![service_running](/images/Service_running.png)
+![service_running](images/Service_running.png)
 
 - Results from Amazon instance
 
-![results](/images/Implementation_results.png)
+![results](images/Implementation_results.png)
 
 ## Challenges 
 - I had to change the port on my Flask application because the AWS instance was not responding properly with the default port.
