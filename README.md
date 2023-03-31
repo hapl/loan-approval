@@ -31,7 +31,7 @@ I compared them using graphs and tables.
 ![Income_before](/images/Income_skewed.png)
 ![Income_after_log](/images/combined_income_log.png)
 
-- For more details, go to section 2 of this [notebook](/notebooks/Project_Implementation.ipynb).
+- For more details, go to section 2 of this [notebook](/notebooks/instructions.ipynb).
 
 ### **2. Data Cleaning**
 
@@ -44,14 +44,14 @@ I compared them using graphs and tables.
     - Loan Amount Term I used the mean according to its data distribution.
     - I used the median for Loan Amount because the data was skewed (right-tailed).
 
-- For more details, go to section 3 of this [notebook](/notebooks/Project_Implementation.ipynb).   
+- For more details, go to section 3 of this [notebook](/notebooks/instructions.ipynb).   
 
 ### **3. Feature Engineering**
 - Transformation of variables Loan Amount and Combined Income (combination of Applicant and Co-applicant Income) into log values to handle a better distribution.
 - Transform categorical variables into dummies for better handling on the ML model.
-- For more information, go to section 3 of this [notebook](/notebooks/Project_Implementation.ipynb). 
+- For more information, go to section 3 of this [notebook](/notebooks/instructions.ipynb). 
 
-- I also implemented pipelines to handle all the transformation in the second part of the project. For more information, go to section 5 of this [notebook](/notebooks/Project_Implementation.ipynb). 
+- I also implemented pipelines to handle all the transformation in the second part of the project. For more information, go to section 5 of this [notebook](/notebooks/instructions.ipynb). 
 
 ### **4. Modelling**
 
@@ -69,13 +69,13 @@ I compared them using graphs and tables.
 - I got better accuracy after rerunning the model with pipelines and optimizations.
 > Accuracy: 80.49%
 
-### ** 5. Deployment**
+### **5. Deployment**
 
 - Deployed in AWS EC2 server.
 - Created an app in Flask on the AWS server.
 - Created a test file in python to test the implementation.
 
-## Results/Demo
+## Results
 
 - The model implemented with pipelines and optimization got an accuracy of 80.49% in loan approval prediction.
 
