@@ -1,4 +1,4 @@
-# Mini Project IV - Machine Learning Model Deployment
+# Loan Approval - Machine Learning Model Deployment
 
 ### [Assignment](assignment.md)
 
